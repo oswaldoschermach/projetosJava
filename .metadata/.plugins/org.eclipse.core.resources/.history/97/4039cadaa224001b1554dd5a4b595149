@@ -1,0 +1,33 @@
+package application;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int i = 0;
+		Quarto[] vetor = new Quarto[10];
+		
+		System.out.println("Insira a quantidade de quartos que serão locados");
+		int n = sc.nextInt();
+		
+		while(i <= n) {
+			System.out.println("Qual o numero do quarto?");
+			int numero = sc.nextInt();
+			sc.nextLine();
+			System.out.println("Nome do aluno:");
+			String nome = sc.nextLine();
+			vetor[numero].setNome(nome);
+			sc.nextLine();
+			System.out.println("E-mail do aluno");
+			String email = sc.nextLine();
+			vetor[numero].setEmail(email);
+		}
+		
+		
+	}
+
+}
